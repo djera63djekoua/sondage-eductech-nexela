@@ -573,10 +573,10 @@ function renderForm(){
 
             <ul class="prog-list">
 
-                <li>✔ Développement des compétences</li>
-                <li>✔ Entrepreneuriat & innovation</li>
-                <li>✔ Leadership & mentorat</li>
-                <li>✔ Réseautage et accompagnement</li>
+                <li>✔ Formation en analyse de données</li>
+                <li>✔ Suivi et évaluation des projets</li>
+                <li>✔ Entrepreneuriat</li>
+                <li>✔ Consultance</li>
 
             </ul>
 
@@ -587,6 +587,198 @@ function renderForm(){
     </div>
 
 </section>
+
+<section class="formations-slider">
+
+    <div class="section-header">
+
+        <span class="section-eyebrow">
+            🎓 Nos formations
+        </span>
+
+        <h2>
+            Des compétences qui créent 
+            <span>l'avenir</span>
+        </h2>
+
+        <p>
+            Découvrez nos activités de formation, ateliers pratiques
+            et accompagnements professionnels.
+        </p>
+
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slider-track">
+
+
+            <article class="slide">
+
+                <img src="images/formations/1.jpg" alt="Formation professionnelle">
+
+                <div class="slide-overlay">
+
+                    <span class="slide-tag">
+                        Formation
+                    </span>
+
+                    <h3>
+                        Développement des compétences
+                    </h3>
+
+                    <p>
+                        Des formations pratiques adaptées aux besoins professionnels.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="slide">
+
+                <img src="images/formations/2.jpg" alt="Formation numérique">
+
+                <div class="slide-overlay">
+
+                    <span class="slide-tag">
+                        Numérique
+                    </span>
+
+                    <h3>
+                        Transformation digitale
+                    </h3>
+
+                    <p>
+                        Maîtriser les outils numériques et les nouvelles technologies.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="slide">
+
+                <img src="images/formations/3.jpg" alt="Formation informatique">
+
+                <div class="slide-overlay">
+
+                    <span class="slide-tag">
+                        Innovation
+                    </span>
+
+                    <h3>
+                        Informatique & Innovation
+                    </h3>
+
+                    <p>
+                        Former les talents aux métiers du digital.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+
+            <article class="slide">
+
+                <img src="images/formations/4.jpg" alt="Conférence">
+
+                <div class="slide-overlay">
+
+                    <span class="slide-tag">
+                        Conférence
+                    </span>
+
+                    <h3>
+                        Partage d'expérience
+                    </h3>
+
+                    <p>
+                        Inspirer, connecter et accompagner les jeunes.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="slide">
+
+                <img src="images/formations/5.jpg" alt="Atelier">
+
+                <div class="slide-overlay">
+
+                    <span class="slide-tag">
+                        Atelier
+                    </span>
+
+                    <h3>
+                        Apprentissage pratique
+                    </h3>
+
+                    <p>
+                        Une approche basée sur la pratique et l'innovation.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="slide">
+
+                <img src="images/formations/6.jpg" alt="Formation">
+
+                <div class="slide-overlay">
+
+                    <span class="slide-tag">
+                        Coaching
+                    </span>
+
+                    <h3>
+                        Accompagnement professionnel
+                    </h3>
+
+                    <p>
+                        Développer les compétences pour réussir.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+        </div>
+
+
+        <!-- boutons navigation -->
+
+        <button class="slider-btn prev">
+            ❮
+        </button>
+
+
+        <button class="slider-btn next">
+            ❯
+        </button>
+
+
+    </div>
+
+
+</section>
+
 <section class="impact reveal-el">
 
     <div class="impact-box">
@@ -1189,4 +1381,144 @@ function render(){
   attachRobustListeners();
 }
 
+
+
+
+
+
+
+
+
 render();
+
+/* =====================================================
+   FORMATION SLIDER
+===================================================== */
+/* =====================================================
+   FORMATION SLIDER
+===================================================== */
+
+
+const track = document.querySelector(".slider-track");
+
+const slides = document.querySelectorAll(".slide");
+
+const nextBtn = document.querySelector(".next");
+
+const prevBtn = document.querySelector(".prev");
+
+
+let index = 0;
+
+
+function getSlideWidth(){
+
+    return slides[0].offsetWidth + 25;
+
+}
+
+
+
+function moveSlider(){
+
+    track.style.transform =
+    `translateX(-${index * getSlideWidth()}px)`;
+
+}
+
+
+
+nextBtn.addEventListener("click",()=>{
+
+
+    index++;
+
+
+    if(index >= slides.length - 2){
+
+        index = 0;
+
+    }
+
+
+    moveSlider();
+
+
+});
+
+
+
+
+
+prevBtn.addEventListener("click",()=>{
+
+
+    index--;
+
+
+    if(index < 0){
+
+        index = slides.length - 3;
+
+    }
+
+
+    moveSlider();
+
+
+});
+
+
+
+
+
+/* Défilement automatique */
+
+
+let autoSlider=setInterval(()=>{
+
+
+    nextBtn.click();
+
+
+},4000);
+
+
+
+
+
+/* Pause au survol */
+
+
+track.addEventListener("mouseenter",()=>{
+
+
+    clearInterval(autoSlider);
+
+
+});
+
+
+
+track.addEventListener("mouseleave",()=>{
+
+
+    autoSlider=setInterval(()=>{
+
+
+        nextBtn.click();
+
+
+    },4000);
+
+
+});
+
+
+
+
+window.addEventListener("resize",()=>{
+
+    moveSlider();
+
+});
