@@ -160,6 +160,38 @@ const ICON_TARGET = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 const ICON_BRIEFCASE = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="8" width="18" height="12" rx="2" fill="#0B87DC"/><path d="M8 8V6C8 4.9 8.9 4 10 4H14C15.1 4 16 4.9 16 6V8" stroke="#0A1830" stroke-width="1.8"/><line x1="3" y1="13" x2="21" y2="13" stroke="#F1810F" stroke-width="2"/></svg>`;
 const ICON_STAR = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.6 8.6L21.5 9.2L16.2 13.6L18 20.5L12 16.8L6 20.5L7.8 13.6L2.5 9.2L9.4 8.6L12 2Z" fill="#F1810F"/></svg>`;
 const ICON_ORELA = `<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8C4 6.34 5.34 5 7 5H19C20.66 5 22 6.34 22 8V14C22 15.66 20.66 17 19 17H12L7 21V17H7C5.34 17 4 15.66 4 14V8Z" fill="#0B87DC"/><circle cx="9" cy="11" r="1.3" fill="white"/><circle cx="13" cy="11" r="1.3" fill="white"/><circle cx="17" cy="11" r="1.3" fill="#F1810F"/></svg>`;
+
+const ICON_MOSSO = `
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- Personne -->
+    <circle cx="13" cy="8" r="3.2" fill="#22C55E"/>
+
+    <!-- Épaules -->
+    <path d="M7 20C7 16.8 9.7 14.5 13 14.5C16.3 14.5 19 16.8 19 20"
+          stroke="#22C55E"
+          stroke-width="2.4"
+          stroke-linecap="round"/>
+
+    <!-- Feuille -->
+    <path d="M18.5 6
+             C20 4.5 22 4.5 22 4.5
+             C22 6.8 20.8 8.6 18.8 9.5"
+          stroke="#F1810F"
+          stroke-width="2"
+          stroke-linecap="round"/>
+
+    <path d="M18 9
+             C17.5 8
+             17.4 6.8
+             18.5 6"
+          stroke="#F1810F"
+          stroke-width="2"
+          stroke-linecap="round"/>
+
+</svg>
+`;
+
 const ICON_NEXELA = `<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="3" width="6" height="12" rx="3" fill="#F1810F"/><path d="M6 12V13C6 16.31 8.69 19 12 19H14C17.31 19 20 16.31 20 13V12" stroke="#F1810F" stroke-width="1.8" stroke-linecap="round"/><line x1="13" y1="19" x2="13" y2="22" stroke="#F1810F" stroke-width="1.8" stroke-linecap="round"/><line x1="9" y1="22" x2="17" y2="22" stroke="#F1810F" stroke-width="1.8" stroke-linecap="round"/></svg>`;
 const ICON_PIN = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C12 22 19 15.5 19 10A7 7 0 0 0 5 10C5 15.5 12 22 12 22Z" fill="#F1810F"/><circle cx="12" cy="10" r="2.6" fill="white"/></svg>`;
 
@@ -198,7 +230,7 @@ function renderForm(){
 
    <div class="hero-banner">
     <span class="hero-badge">Grand Appel à Collaboration</span>
-    <span class="hero-company">Cabinet EducTech Consulting</span>
+    <span class="hero-company">Cabinet EducTech & Mosso corporation</span>
   </div>
 
 
@@ -259,14 +291,13 @@ function renderForm(){
         </h2>
 
         <p class="intro-text">
-            <strong>EducTech Consulting</strong> rassemble des personnes passionnées qui souhaitent transmettre leurs compétences, inspirer les autres et contribuer au développement des jeunes à travers des formations, des conférences et des échanges d'expériences.
+            <strong>EducTech Consulting et Mosso corporation</strong> rassemblent des personnes passionnées qui souhaitent transmettre leurs compétences, inspirer les autres et contribuer au développement des jeunes à travers des formations, des conférences et des échanges d'expériences.
         </p>
 
     </div>
 
 </section>
-
-  <section class="profils reveal-el">
+<section class="profils reveal-el">
 
     <div class="section-eyebrow">
         🤝 Profils recherchés
@@ -279,58 +310,112 @@ function renderForm(){
     </h2>
 
     <p class="section-desc">
-        Vous possédez une compétence, une expérience ou une passion à transmettre ?
-        Rejoignez notre réseau de collaborateurs et contribuez à inspirer la jeunesse.
+        Vous êtes un professionnel, un entrepreneur, un expert ou un passionné désireux de partager vos connaissances ? Rejoignez le réseau du Cabinet EducTech Consulting et contribuez à former, inspirer et accompagner les talents de demain.
     </p>
 
     <div class="profil-grid">
 
+        <!-- Formation -->
+
         <div class="profil-item">
-            <div class="icon-badge blue-bg">${ICON_CAP}</div>
 
-            <h3>Formateurs</h3>
+            <div class="icon-badge blue-bg">
+                ${ICON_CAP}
+            </div>
 
-            <p>Animez des formations pratiques et accompagnez le développement des compétences.</p>
+            <h3>Formateurs & Enseignants</h3>
+
+            <p>
+                Animez des formations, ateliers, conférences ou masterclass
+                dans votre domaine d'expertise.
+            </p>
+
         </div>
 
+        <!-- Numérique -->
+
         <div class="profil-item">
-            <div class="icon-badge blue-bg">${ICON_CODE}</div>
 
-            <h3>Développeurs</h3>
+            <div class="icon-badge blue-bg">
+                ${ICON_CODE}
+            </div>
 
-            <p>Web, mobile, logiciels, intelligence artificielle ou innovation numérique.</p>
+            <h3>Experts du Numérique</h3>
+
+            <p>
+                Développement web et mobile, intelligence artificielle,
+                cybersécurité, data, cloud, bureautique et innovation digitale.
+            </p>
+
         </div>
 
+        <!-- Communication -->
+
         <div class="profil-item">
-            <div class="icon-badge orange-bg">${ICON_MEGAPHONE}</div>
 
-            <h3>Communication</h3>
+            <div class="icon-badge orange-bg">
+                ${ICON_MEGAPHONE}
+            </div>
 
-            <p>Audiovisuel, journalisme, médias, création de contenus et storytelling.</p>
+            <h3>Communication & Médias</h3>
+
+            <p>
+                Journalistes, créateurs de contenus, podcasteurs,
+                photographes, vidéastes, animateurs et spécialistes de la communication.
+            </p>
+
         </div>
 
+        <!-- Entrepreneuriat -->
+
         <div class="profil-item">
-            <div class="icon-badge orange-bg">${ICON_TARGET}</div>
 
-            <h3>Marketing Digital</h3>
+            <div class="icon-badge green-bg">
+                ${ICON_TARGET}
+            </div>
 
-            <p>Stratégie digitale, réseaux sociaux, publicité et visibilité des projets.</p>
+            <h3>Entrepreneurs & Innovateurs</h3>
+
+            <p>
+                Porteurs de projets, startups, coachs, mentors et
+                acteurs de l'innovation souhaitant accompagner la jeunesse.
+            </p>
+
         </div>
 
+        <!-- Gestion -->
+
         <div class="profil-item">
-            <div class="icon-badge blue-bg">${ICON_BRIEFCASE}</div>
 
-            <h3>Conseil stratégique</h3>
+            <div class="icon-badge blue-bg">
+                ${ICON_BRIEFCASE}
+            </div>
 
-            <p>Leadership, gestion, entrepreneuriat, innovation et accompagnement.</p>
+            <h3>Consultants & Experts</h3>
+
+            <p>
+                Gestion de projet, leadership, ressources humaines,
+                finance, développement local, secteur humanitaire et conseil stratégique.
+            </p>
+
         </div>
 
+        <!-- Autres -->
+
         <div class="profil-item">
-            <div class="icon-badge orange-bg">${ICON_STAR}</div>
 
-            <h3>Autres expertises</h3>
+            <div class="icon-badge orange-bg">
+                ${ICON_STAR}
+            </div>
 
-            <p>Toute compétence utile pouvant créer un impact positif pour notre communauté.</p>
+            <h3>Autres Expertises</h3>
+
+            <p>
+                Toute compétence, expérience ou initiative pouvant contribuer
+                au développement des compétences, à l'employabilité et à
+                l'entrepreneuriat des jeunes.
+            </p>
+
         </div>
 
     </div>
@@ -340,7 +425,7 @@ function renderForm(){
  <section class="programs reveal-el" id="programs-anchor">
 
     <div class="section-eyebrow">
-        🚀 Deux programmes • Une même mission
+        🚀 Trois programmes • Une même mission
     </div>
 
     <h2 class="section-title">
@@ -454,11 +539,55 @@ function renderForm(){
 
         </article>
 
+        <!-- MOSSO CONNECT -->
+
+        <article class="prog-box mosso">
+
+            <div class="prog-number">03</div>
+
+            <div class="prog-top">
+
+                <div class="icon-badge green-bg">
+                    ${ICON_MOSSO}
+                </div>
+
+                <div>
+
+                    <div class="prog-tag">
+                        Jeunesse & Entrepreneuriat
+                    </div>
+
+                    <div class="prog-name">
+                        Mosso Connect
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="prog-desc">
+                Développez les compétences des jeunes, stimulez l'entrepreneuriat
+                et accompagnez les porteurs de projets vers un avenir durable grâce
+                au mentorat, aux formations et au réseautage.
+            </p>
+
+            <ul class="prog-list">
+
+                <li>✔ Développement des compétences</li>
+                <li>✔ Entrepreneuriat & innovation</li>
+                <li>✔ Leadership & mentorat</li>
+                <li>✔ Réseautage et accompagnement</li>
+
+            </ul>
+
+        </article>
+        
+
+
     </div>
 
 </section>
-
- <section class="impact reveal-el">
+<section class="impact reveal-el">
 
     <div class="impact-box">
 
@@ -467,42 +596,57 @@ function renderForm(){
         </div>
 
         <span class="impact-tag">
-            ✨ Une collaboration porteuse de sens
+            ✨ Rejoignez un réseau d'impact
         </span>
 
         <h2 class="impact-title">
-            Ensemble, créons un impact durable
+            Ensemble, construisons les compétences de demain
         </h2>
 
         <p class="impact-text">
 
-            Cette collaboration repose avant tout sur
-            <span class="hl-blue">le partage des connaissances</span>,
-            l'entraide et l'engagement citoyen.
+            En rejoignant le <span class="hl-blue">Cabinet EducTech Consulting</span>,
+            vous intégrez une communauté de professionnels, de formateurs, de mentors
+            et d'innovateurs engagés pour le développement des compétences,
+            l'employabilité et l'entrepreneuriat des jeunes.
 
-            Dans un premier temps, elle est réalisée
-            <strong>sans contrepartie financière</strong>,
-            mais offre une réelle opportunité de bénéficier de
-            <span class="hl-orange">visibilité, d'un réseau professionnel et de nouvelles opportunités.</span>
+            <br><br>
+
+            Notre collaboration repose avant tout sur
+            <strong>le partage des connaissances, la solidarité professionnelle
+            et l'engagement citoyen.</strong>
+
+            Dans cette première phase, les interventions sont réalisées
+            <strong>sur une base volontaire</strong>, tout en offrant des opportunités
+            de <span class="hl-orange">visibilité, de réseautage, de développement personnel
+            et de futures collaborations professionnelles.</span>
 
         </p>
 
         <div class="impact-items">
 
             <div class="impact-item">
-                ⭐ Valorisez votre expertise
+                🎓 Partagez votre expertise
             </div>
 
             <div class="impact-item">
-                🌍 Développez votre réseau
+                🌍 Développez votre réseau professionnel
             </div>
 
             <div class="impact-item">
-                🚀 Inspirez la jeunesse
+                🚀 Accompagnez les jeunes talents
             </div>
 
             <div class="impact-item">
-                🤝 Contribuez au développement du pays
+                💡 Encouragez l'innovation et l'entrepreneuriat
+            </div>
+
+            <div class="impact-item">
+                🤝 Collaborez avec des experts de divers secteurs
+            </div>
+
+            <div class="impact-item">
+                🇹🇩 Contribuez au développement durable du Tchad
             </div>
 
         </div>
@@ -531,7 +675,7 @@ function renderForm(){
 
             <h2 class="loc-title">
 
-                Cabinet EducTech Consulting
+                Cabinet EducTech & Mosso corporation
 
             </h2>
 
@@ -564,88 +708,364 @@ function renderForm(){
 </section>
 
   <section class="form-section" id="form-anchor">
+
     <div class="form-wrap">
-      <form class="panel" id="mainForm" action="https://formspree.io/f/xpqvzbgr" method="POST" onsubmit="submitForm(event)">
-        <div class="panel-title">Rejoindre le réseau</div>
-        <div class="panel-sub">Remplissez ce court formulaire, nous vous recontactons.</div>
-        <div class="progress-track"><div class="progress-fill" style="width:${formProgress(v)}%"></div></div>
-        ${state.formError ? `<div class="form-error">${state.formError}</div>` : ''}
 
-        <input type="hidden" name="_subject" value="Nouvelle réponse — Sondage EducTech Consulting" />
+        <form class="panel"
+              id="mainForm"
+              action="https://formspree.io/f/xpqvzbgr"
+              method="POST"
+              onsubmit="submitForm(event)">
 
-        <div class="field">
-          <label class="q"><span class="field-icon">${FI.user}</span>Nom complet <span class="req">*</span></label>
-          <div class="input-wrap">
-            <span class="field-emoji">${FI.user}</span>
-            <input type="text" name="nom" value="${v.nom}" oninput="window.__setNom(this.value)" placeholder="Votre nom et prénom" required />
-          </div>
+            <div class="panel-title">
+                Rejoindre le réseau EducTech Consulting
+            </div>
+
+            <div class="panel-sub">
+                Rejoignez notre communauté d'experts, de formateurs, de mentors et
+                d'innovateurs pour contribuer au développement des compétences,
+                de l'entrepreneuriat et de l'innovation au Tchad.
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" style="width:${formProgress(v)}%"></div>
+            </div>
+
+            ${state.formError ? `<div class="form-error">${state.formError}</div>` : ''}
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="Nouvelle candidature — EducTech Consulting" />
+
+            <!-- Nom -->
+
+            <div class="field">
+
+                <label class="q">
+
+                    <span class="field-icon">${FI.user}</span>
+
+                    Nom complet
+
+                    <span class="req">*</span>
+
+                </label>
+
+                <div class="input-wrap">
+
+                    <span class="field-emoji">${FI.user}</span>
+
+                    <input
+                        type="text"
+                        name="nom"
+                        value="${v.nom}"
+                        oninput="window.__setNom(this.value)"
+                        placeholder="Votre nom et prénom"
+                        required />
+
+                </div>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="field">
+
+                <label class="q">
+
+                    <span class="field-icon">${FI.phone}</span>
+
+                    Téléphone ou Email
+
+                    <span class="req">*</span>
+
+                </label>
+
+                <div class="input-wrap">
+
+                    <span class="field-emoji">${FI.phone}</span>
+
+                    <input
+                        type="text"
+                        name="contact"
+                        value="${v.contact}"
+                        oninput="window.__setContact(this.value)"
+                        placeholder="+235 ... ou votre adresse email"
+                        required />
+
+                </div>
+
+            </div>
+
+            <!-- Profil -->
+
+            <div class="field">
+
+                <label class="q">
+
+                    <span class="field-icon">${FI.people}</span>
+
+                    Votre profil
+
+                    <span class="req">*</span>
+
+                </label>
+
+                <input
+                    type="hidden"
+                    name="profil"
+                    value="${v.tranche}" />
+
+                <div class="tile-grid">
+
+                    ${[
+                        ['Étudiant',FI.grad],
+                        ['Professionnel',FI.briefcase],
+                        ['Entrepreneur',FI.bulb],
+                        ['Consultant',FI.handshake],
+                        ['Autre',FI.sparkle]
+                    ].map(([t,icon])=>`
+
+                    <div class="tile ${v.tranche===t?'sel':''}"
+                         onclick="window.__setTranche('${t}')">
+
+                        <span class="tile-icon">${icon}</span>
+
+                        <span class="tile-label">${t}</span>
+
+                    </div>
+
+                    `).join('')}
+
+                </div>
+
+            </div>
+
+            <!-- Domaine -->
+
+            <div class="field">
+
+                <label class="q">
+
+                    <span class="field-icon">${FI.tools}</span>
+
+                    Domaine(s) de compétence
+
+                    <span class="req">*</span>
+
+                </label>
+
+                <input
+                    type="hidden"
+                    name="domaines"
+                    value="${v.domaines.join(', ')}" />
+
+                ${chipGroup('domaines', [
+
+                    ['Formation & Enseignement',FI.grad],
+
+                    ['Développement Web & IA',FI.code],
+
+                    ['Communication & Médias',FI.mic],
+
+                    ['Marketing Digital',FI.chart],
+
+                    ['Entrepreneuriat & Innovation',FI.bulb],
+
+                    ['Gestion de projet & Conseil',FI.briefcase],
+
+                    ['Secteur humanitaire',FI.handshake],
+
+                    ['Autre',FI.sparkle]
+
+                ])}
+
+                <div class="hint">
+                    Vous pouvez sélectionner plusieurs domaines.
+                </div>
+
+                ${v.domaines.includes('Autre')
+
+                    ? `<input
+                        style="margin-top:12px"
+                        type="text"
+                        name="domaine_autre"
+                        value="${v.domaineAutre}"
+                        oninput="window.__setDomaineAutre(this.value)"
+                        placeholder="Précisez votre domaine" />`
+
+                    : ''}
+
+            </div>
+
+            <!-- Programmes -->
+
+            <div class="field">
+
+                <label class="q">
+
+                    <span class="field-icon">${FI.target}</span>
+
+                    Programme(s) souhaité(s)
+
+                </label>
+
+                <input
+                    type="hidden"
+                    name="programmes"
+                    value="${v.formats.join(', ')}" />
+
+                ${chipGroup('formats',[
+
+                    ['ORELA — Formation & Conférences',FI.grad],
+
+                    ['NEXELA — Podcast & Médias',FI.mic],
+
+                    ['MOSSO CONNECT — Entrepreneuriat',FI.bulb],
+
+                    ['Tous les programmes',FI.handshake]
+
+                ])}
+
+            </div>
+
+            <!-- Modalité -->
+
+            <div class="field">
+
+                <label class="q">
+
+                    <span class="field-icon">${FI.pin}</span>
+
+                    Modalité préférée
+
+                </label>
+
+                <input
+                    type="hidden"
+                    name="modalite"
+                    value="${v.modalite}" />
+
+                <div class="tile-grid tile-grid-4">
+
+                    ${[
+                        ['Présentiel',FI.building],
+                        ['En ligne',FI.laptop],
+                        ['Hybride',FI.shuffle],
+                        ['Flexible',FI.calendar]
+                    ].map(([t,icon])=>`
+
+                    <div class="tile ${v.modalite===t?'sel':''}"
+                         onclick="window.__setModalite('${t}')">
+
+                        <span class="tile-icon">${icon}</span>
+
+                        <span class="tile-label">${t}</span>
+
+                    </div>
+
+                    `).join('')}
+
+                </div>
+
+            </div>
+
+            <!-- Contribution -->
+
+            <div class="field">
+
+                <label class="q">
+
+                    <span class="field-icon">${FI.bulb}</span>
+
+                    Comment souhaitez-vous contribuer ?
+
+                </label>
+
+                <textarea
+                    name="themes"
+                    maxlength="350"
+                    oninput="window.__setThemes(this.value)"
+                    placeholder="Présentez brièvement votre expérience, vos compétences ou ce que vous souhaitez apporter au réseau...">${v.themes}</textarea>
+
+                <div class="char-count">
+                    ${v.themes.length}/350
+                </div>
+
+            </div>
+
+            <!-- Disponibilité -->
+
+            <div class="field">
+
+                <label class="q">
+
+                    <span class="field-icon">${FI.calendar}</span>
+
+                    Disponibilités
+
+                </label>
+
+                <div class="input-wrap">
+
+                    <span class="field-emoji">${FI.calendar}</span>
+
+                    <input
+                        type="text"
+                        name="disponibilite"
+                        value="${v.dispo}"
+                        oninput="window.__setDispo(this.value)"
+                        placeholder="Ex. : En semaine, week-end, soirées..." />
+
+                </div>
+
+            </div>
+
+            <!-- Confidentialité -->
+
+            <div class="privacy-note">
+
+                🔒 Vos informations resteront strictement confidentielles
+                et seront utilisées uniquement dans le cadre des activités
+                du Cabinet EducTech Consulting.
+
+            </div>
+
+            <!-- Bouton -->
+
+            <button
+                class="submit"
+                type="submit"
+                id="submitBtn"
+                ${state.submitting?'disabled':''}>
+
+                ${state.submitting
+                    ? 'Envoi en cours...'
+                    : 'Rejoindre le réseau'}
+
+            </button>
+
+        </form>
+
+        <div class="admin-toggle">
+
+            Espace organisateur —
+
+            <button
+                type="button"
+                class="admin-link-btn"
+                id="viewResponsesBtn">
+
+                Voir les réponses
+
+            </button>
+
         </div>
 
-        <div class="field">
-          <label class="q"><span class="field-icon">${FI.phone}</span>Contact (téléphone ou email) <span class="req">*</span></label>
-          <div class="input-wrap">
-            <span class="field-emoji">${FI.phone}</span>
-            <input type="text" name="contact" value="${v.contact}" oninput="window.__setContact(this.value)" placeholder="+235 ... ou email" required />
-          </div>
-        </div>
-
-        <div class="field">
-          <label class="q"><span class="field-icon">${FI.compass}</span>Vous êtes plutôt <span class="req">*</span></label>
-          <input type="hidden" name="tranche" value="${v.tranche}" />
-          <div class="tile-grid">
-            ${[['Jeune',FI.sprout],['Leader communautaire',FI.compass],['Aîné',FI.tree],['Autre',FI.sparkle]].map(([t,icon])=>`
-              <div class="tile ${v.tranche===t?'sel':''}" onclick="window.__setTranche('${t}')">
-                <span class="tile-icon">${icon}</span><span class="tile-label">${t}</span>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-
-        <div class="field">
-          <label class="q"><span class="field-icon">${FI.tools}</span>Domaine(s) de compétence <span class="req">*</span></label>
-          <input type="hidden" name="domaines" value="${v.domaines.join(', ')}" />
-          ${chipGroup('domaines', [['Formateur',FI.grad],['Développeur web/digital',FI.code],['Communication & Journalisme',FI.mic],['Marketing digital',FI.chart],['Conseil stratégique',FI.briefcase],['Autre',FI.sparkle]])}
-          <div class="hint">Sélectionnez une ou plusieurs options</div>
-          ${v.domaines.includes('Autre') ? `<input style="margin-top:10px" type="text" name="domaine_autre" value="${v.domaineAutre}" oninput="window.__setDomaineAutre(this.value)" placeholder="Précisez votre domaine" />` : ''}
-        </div>
-
-        <div class="field">
-          <label class="q"><span class="field-icon">${FI.target}</span>Programme(s) souhaité(s)</label>
-          <input type="hidden" name="programmes" value="${v.formats.join(', ')}" />
-          ${chipGroup('formats', [['ORELA — Formateur/Conférencier',FI.mic],['NEXELA — Podcast/Interview',FI.mic],['Les deux',FI.handshake]])}
-        </div>
-
-        <div class="field">
-          <label class="q"><span class="field-icon">${FI.pin}</span>Format préféré</label>
-          <input type="hidden" name="modalite" value="${v.modalite}" />
-          <div class="tile-grid tile-grid-3">
-            ${[['Présentiel',FI.building],['En ligne',FI.laptop],['Peu importe',FI.shuffle]].map(([t,icon])=>`
-              <div class="tile ${v.modalite===t?'sel':''}" onclick="window.__setModalite('${t}')">
-                <span class="tile-icon">${icon}</span><span class="tile-label">${t}</span>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-
-        <div class="field">
-          <label class="q"><span class="field-icon">${FI.bulb}</span>Thématique(s) que vous aimeriez aborder</label>
-          <textarea name="themes" maxlength="240" oninput="window.__setThemes(this.value)" placeholder="Ex : éducation, leadership, numérique, entrepreneuriat...">${v.themes}</textarea>
-          <div class="char-count">${v.themes.length}/240</div>
-        </div>
-
-        <div class="field">
-          <label class="q"><span class="field-icon">${FI.calendar}</span>Disponibilités approximatives</label>
-          <div class="input-wrap">
-            <span class="field-emoji">${FI.calendar}</span>
-            <input type="text" name="disponibilite" value="${v.dispo}" oninput="window.__setDispo(this.value)" placeholder="Ex : semaine, week-end, soirées..." />
-          </div>
-        </div>
-
-        <button class="submit" type="submit" id="submitBtn" ${state.submitting?'disabled':''}>${state.submitting?'Envoi en cours…':'Envoyer ma réponse'}</button>
-      </form>
-      <div class="admin-toggle">Espace organisateur — <button type="button" class="admin-link-btn" id="viewResponsesBtn">voir les réponses</button></div>
     </div>
-  </section>
+
+</section>
   `;
 }
 
