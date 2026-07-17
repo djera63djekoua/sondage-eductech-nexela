@@ -310,7 +310,7 @@ function renderForm(){
     </h2>
 
     <p class="section-desc">
-        Vous êtes un professionnel, un entrepreneur, un expert ou un passionné désireux de partager vos connaissances ? Rejoignez le réseau du Cabinet EducTech Consulting et contribuez à former, inspirer et accompagner les talents de demain.
+        Vous êtes un professionnel, un entrepreneur, un expert ou un passionné désireux de partager vos connaissances ? Rejoignez le réseau de notre Cabinet et contribuez à former, inspirer et accompagner les talents de demain.
     </p>
 
     <div class="profil-grid">
@@ -718,7 +718,7 @@ function renderForm(){
               onsubmit="submitForm(event)">
 
             <div class="panel-title">
-                Rejoindre le réseau EducTech Consulting
+                Rejoindre le réseau du cabinet
             </div>
 
             <div class="panel-sub">
