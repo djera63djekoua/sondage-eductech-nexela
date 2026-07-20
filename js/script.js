@@ -436,7 +436,7 @@ function renderForm(){
 
     <p class="section-desc">
         Partagez votre expertise, inspirez la jeunesse et développez votre réseau
-        grâce aux programmes du Cabinet EducTech Consulting.
+        grâce aux programmes du Cabinet.
     </p>
 
     <div class="prog-grid">
@@ -797,7 +797,7 @@ function renderForm(){
 
         <p class="impact-text">
 
-            En rejoignant le <span class="hl-blue">Cabinet EducTech Consulting</span>,
+            En rejoignant le <span class="hl-blue">Cabinet EducTech Consulting & Mosso corporation</span>,
             vous intégrez une communauté de professionnels, de formateurs, de mentors
             et d'innovateurs engagés pour le développement des compétences,
             l'employabilité et l'entrepreneuriat des jeunes.
